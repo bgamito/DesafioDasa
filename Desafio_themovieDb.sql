@@ -1,7 +1,7 @@
 --Dentre os filmes em cartaz, qual o filme com maior receita e qual sua receita e seu orçamento?
 select title, revenue, budget  from tb_movie
 where now_playing = 'S' and 
-tm.revenue in (select Max(revenue) from tb_movie);
+revenue in (select Max(revenue) from tb_movie);
 
 
 
